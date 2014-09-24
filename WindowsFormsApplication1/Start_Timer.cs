@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Recognition;
+using System.Speech.Synthesis;
 
 namespace WindowsFormsApplication1
 {
@@ -14,10 +16,11 @@ namespace WindowsFormsApplication1
     {
         private int minutes;
         private int seconds;
-
+        private SpeechSynthesizer SpeakingClock = new SpeechSynthesizer();
         public Start_Timer()
         {
             InitializeComponent();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -52,6 +55,67 @@ namespace WindowsFormsApplication1
                     lbl_sec.Text = seconds.ToString();
                 }
             }
+            if(minutes == 4 && seconds == 0)
+            {
+                SpeakingClock.Speak(minutes.ToString());
+            }
+            else if (minutes == 3 && seconds == 0)
+            {
+                SpeakingClock.Speak(minutes.ToString());
+            }
+            else if (minutes == 2 && seconds == 0)
+            {
+                SpeakingClock.Speak(minutes.ToString());
+            }
+            else if (minutes == 1 && seconds == 0)
+            {
+                SpeakingClock.Speak(minutes.ToString());
+            }
+            else if (minutes == 0 && seconds == 10)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 9)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 8)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 7)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 6)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 5)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 4)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 3)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 2)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 1)
+            {
+                SpeakingClock.Speak(seconds.ToString());
+            }
+            else if (minutes == 0 && seconds == 0)
+            {
+                SpeakingClock.Speak("Start");
+            }
+
         }
 
 
